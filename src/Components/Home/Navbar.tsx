@@ -58,10 +58,12 @@ export default function Navbar(props: Props) {
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box><Avatar
+          <Box>
+            <Link to ="/">
+            <Avatar
                     size={'lg'}
                     src={logo}
-                  /></Box>
+                  /></Link></Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>

@@ -12,7 +12,7 @@ import {
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
  import logo from '../../Utils/logo.jpeg';
-
+import {Link} from "react-router-dom"
   const SocialButton = ({
     children,
     label,
@@ -48,7 +48,7 @@ import {
     return (
       <Box
      
-        bg={useColorModeValue('gray.50', 'gray.900')}
+        bg={useColorModeValue('gray.100', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}>
         <Container
           as={Stack}
@@ -58,10 +58,12 @@ import {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Box><Avatar
+          <Box>
+            <Link to = "/">
+            <Avatar
                    
                     src={logo}
-                  />
+                  /></Link>
           </Box>
 
           
