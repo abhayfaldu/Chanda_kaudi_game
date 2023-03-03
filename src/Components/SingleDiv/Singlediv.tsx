@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import React, { useEffect, useState } from 'react';
 import styles from "./singlediv.module.css";
 
@@ -14,7 +15,20 @@ interface SingledivProps {
 }
 
 
+
+
+
 const Singlediv: React.FC<SingledivProps> = ({ alldata, dicefun, rowind, colind, khiladi, khiladifun, dicevalue, stfun, st }) => {
+
+const HomeStyle = {
+  backgroundImage: `url(${
+    rowind == 2 && colind == 2
+      ? `https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/HomeIcon_498245.png`
+      : "none"
+  })`,
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+};
 
   const ChanceofPlayer = (wplaying: number, wcodi: number, diceval: number, codival: string, rowpos: number, colpos: number) => {
     if (diceval === 0) {
@@ -30,7 +44,6 @@ const Singlediv: React.FC<SingledivProps> = ({ alldata, dicefun, rowind, colind,
     else {
       khiladifun(khiladi + 1)
     }
-
 
 
     let gameboard = JSON.parse(localStorage.getItem("gameboard")!);
@@ -640,7 +653,7 @@ const Singlediv: React.FC<SingledivProps> = ({ alldata, dicefun, rowind, colind,
 
   return (
     <div>
-      <div className={styles.singlediv_box}>
+      <div style={HomeStyle} className={styles.singlediv_box}>
         {alldata.length !== 0 ?
           alldata.map((el, i) => {
             return <button key={i} onClick={() => ChanceofPlayer(khiladi, el.player, dicevalue, el.codi, el.row, el.col)} style={{ backgroundColor: `${el.color}` }} className={styles.Singlediv_codi}></button>

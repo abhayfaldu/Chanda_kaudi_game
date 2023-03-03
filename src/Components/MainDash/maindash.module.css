@@ -1,18 +1,121 @@
 .main_div_gameboard_outerdiv{
     width: 60%;
-    height: 80vh;
+    height: 95vh;
+    background: url('https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/w4_922344.jpeg');
+     background-repeat: no-repeat;
+    
+    background-size: cover;
     margin: auto;
-    margin-top: 7rem;
-    border: 1px solid black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 10px;
+    border: 0px solid black;
+    border-radius: 20px;
+    background-color: rgb(184, 178, 178);
+     
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+.Throwbtn{
+    width: 100%;
+    color: beige;
+    height: 40px;
+    border: 0px solid red;
+    width: 50%;
+    font-size: 20px;
+    background: url('https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/w3_629835.jpeg');
+    border-radius: 5px;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-weight: bold;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px)  {
+ .main_div_gameboard_outerdiv{
+    width: 70%;
+    height: auto;
+   
+ }
+
+ .main_div_gameboard{
+     width: 100%;
+ }
+
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+    .main_div_gameboard_outerdiv{
+    width: 95%;
+    height: auto;
+     padding: 0px;
+ }
+ .main_div_gameboard{
+     width: 100%;
+     padding: 0px;
+ }
+
+ .Throwbtn{
+    color: beige;
+    height: 40px;
+    border: 0px solid red;
+    width: 60%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+}
+
+
+
 .main_div_gameboard{
+    background: url("https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/w1_181388.jpeg");
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    
+    border-radius: 10px;
     width: 80%;
-    /* height: 60%;  */
+     height: 75%; 
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: auto;
-    /* gap: 12px; */
-    margin: auto;
-    border: 1px solid red;
+    padding: auto;
+    margin: auto; 
+     margin-top: 10px;
+    border: 0.5px solid rgb(102, 98, 98);
+    background-color: #dfa24e;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: bold;
+    animation: myanimation 10s infinite;
+
+}
+
+
+
+.Throwbtn:hover{
+    color: greenyellow;
+    background: url('https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/w_265022.jpeg');
+}
+/* .mydiv {
+  width:100%;
+  height:100%;
+  color:black;
+  font-weight:bold;
+  animation: myanimation 10s infinite;
+} */
+
+@keyframes myanimation {
+  0% {color: rgb(245, 68, 68)}
+  25%{color:yellow;}
+  50%{color:rgb(45, 245, 45);}
+  75%{color:rgb(140, 250, 232);}
+  100% {color: rgb(230, 163, 233);}
 }
