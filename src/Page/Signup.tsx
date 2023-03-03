@@ -40,51 +40,86 @@ const formData: Props = {
     const state: stateType = useSelector((state: any) => state.AuthManager);
     const { isAuth, loading, error } = state;
     const navigate = useNavigate();
-  
+     
   
     //Login Success toast
-    const toast = useToast({
+     const toast = useToast({
       title: `Signup Successful`,
-      status: "success",
-      isClosable: true,
-      position: "top",
-    });
+       status: "success",
+       isClosable: true,
+       position: "top",
+     });
   
-    //Partially filled form
-    const partial = useToast({
-      title: `Kinldy fill all the detials`,
-      status: "warning",
-      isClosable: true,
-      position: "top",
-    });
+    // //Partially filled form
+    // const partial = useToast({
+    //   title: `Kinldy fill all the detials`,
+    //   status: "warning",
+    //   isClosable: true,
+    //   position: "top",
+    // });
   
-    //Error Loggin In
-    const Error = useToast({
-      title: `Error!`,
-      status: "error",
-      isClosable: true,
-      position: "top",
-    });
+    // //Error Loggin In
+    // const Error = useToast({
+    //   title: `Error!`,
+    //   status: "error",
+    //   isClosable: true,
+    //   position: "top",
+    // });
   
     //Login API call
   
     const dispatch: any = useDispatch();
   
-    
+    // let arr:any[] = JSON.parse(localStorage.getItem("User"))||[]
    
 
-    const handleSubmit = () => {
-      if (Form.email === "" || Form.password === "" || Form.name === "" || Form.image === "") {
-        partial();
-      } else {
+    // const handleSubmit = () => {
+    //   // if (Form.email === "" || Form.password === "" || Form.name === "" || Form.image === "") {
+    //   //   partial();
+    //   // } else {
        
-      dispatch(register(Form.email, Form.password , Form.name , Form.image));
-          toast();
-        navigate("/login");
-      }
-    
+    //   // dispatch(register(Form.email, Form.password , Form.name , Form.image));
+    //   //     toast();
+    //   //   navigate("/login");
+    //   // }
+    //   let name = Form.name;
+    //   let email = Form.email;
+    //   let image = Form.image;
+    //   let password  = Form.password;
+    //   const payload = {
+    //     name,
+    //     email,
+    //     image, 
+    //     password,
+    //   }
+    //   console.log(payload)
 
-    };
+    //   arr.push(payload)
+    //   localStorage.setItem("User" , JSON.stringify(arr))
+
+    // };
+    let arr: Props[] = JSON.parse(localStorage.getItem("User") as string) || [];
+
+const handleSubmit = (): void => {
+  let name: string = Form.name;
+  let email: string = Form.email;
+  let image: string = Form.image;
+  let password: string = Form.password;
+
+  const payload: Props = {
+    name: name,
+    email: email,
+    image: image,
+    password: password,
+  }
+
+  console.log(payload);
+
+  arr.push(payload);
+  localStorage.setItem("User", JSON.stringify(arr));
+ toast()
+  navigate("/login")
+}
     
 
     return (

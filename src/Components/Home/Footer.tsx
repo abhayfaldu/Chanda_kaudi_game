@@ -71,7 +71,7 @@ import {Link} from "react-router-dom"
                   
                
 
-          <Text>© 2023. All rights reserved</Text>
+          <Text>© 2023.CHANDA KAUDI GAME All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
