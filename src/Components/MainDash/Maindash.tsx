@@ -17,10 +17,31 @@ interface CellData {
 }
 
 const Maindash: React.FC = () => {
+
+const [state, setState] = useState<boolean>(true);
+const [chance, setChance] = useState<number>(0);
+const [dice, setDice] = useState<number>(0);
+const [board, setBoard] = useState<CellData[][][]>([[[]]]);
+
+useEffect(() => {
+  let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
+  // console.log(gameboard);
+  
+  const mat: CellData[][][] = new Array(5);
+  for (let i = 0; i < 5; i++) {
+    mat[i] = new Array(5).fill(null);
+  }
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+      mat[i][j] = new Array();
+    }
+  }
+
   const [state, setState] = useState<boolean>(true);
   const [chance, setChance] = useState<number>(1);
   const [dice, setDice] = useState<number>(0);
   const [board, setBoard] = useState<CellData[][][]>([[[]]]);
+
 
   useEffect(() => {
     let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
