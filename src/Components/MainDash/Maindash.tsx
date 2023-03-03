@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Singlediv from '../SingleDiv/Singlediv';
 import styles from "./maindash.module.css";
-
 import { Flex, Image, Box, Heading } from "@chakra-ui/react";
 import { GameBoardtype as GameData } from "../../App";
-
-
-
-
 interface CellData {
   player: number;
   codi: string;
@@ -15,38 +10,13 @@ interface CellData {
   row: number;
   col: number;
 }
-
 const Maindash: React.FC = () => {
-
-const [state, setState] = useState<boolean>(true);
-const [chance, setChance] = useState<number>(0);
-const [dice, setDice] = useState<number>(0);
-const [board, setBoard] = useState<CellData[][][]>([[[]]]);
-
-useEffect(() => {
-  let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
-  // console.log(gameboard);
-  
-  const mat: CellData[][][] = new Array(5);
-  for (let i = 0; i < 5; i++) {
-    mat[i] = new Array(5).fill(null);
-  }
-  for (let i = 0; i < 5; i++) {
-    for (let j = 0; j < 5; j++) {
-      mat[i][j] = new Array();
-    }
-  }
-
   const [state, setState] = useState<boolean>(true);
   const [chance, setChance] = useState<number>(1);
   const [dice, setDice] = useState<number>(0);
   const [board, setBoard] = useState<CellData[][][]>([[[]]]);
-
-
   useEffect(() => {
     let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
-    
-
     const mat: CellData[][][] = new Array(5);
     for (let i = 0; i < 5; i++) {
       mat[i] = new Array(5).fill(null);
@@ -56,7 +26,6 @@ useEffect(() => {
         mat[i][j] = new Array();
       }
     }
-
     for (let i = 0; i < 5; i++) {
       for (let j = 0; j < 5; j++) {
         if (gameboard?.player1?.a[0] === i && gameboard?.player1?.a[1] === j) {
@@ -111,13 +80,10 @@ useEffect(() => {
     }
     setBoard(mat);
   }, [state]);
-
   const Generateno = () => {
     const random = Math.ceil(Math.random() * 5);
     setDice(random);
-  
   };
-
   const RestartGame = () => {
     let gameboard : GameData = {
         player1 : {
@@ -145,14 +111,11 @@ useEffect(() => {
           d : [4,0],
         },
       }
-    
       localStorage.setItem("gameboard",JSON.stringify(gameboard));
     setDice(0)
     setChance(1)
     setState(!state)
 }
-
-
 return (
   <div className={styles.main_div_gameboard_outerdiv}>
     <Flex align={"center"} justify={"center"} gap={"10px"}>
@@ -166,7 +129,6 @@ return (
       />
       <h1 className={styles.heading}>Ashta Chamma</h1>
     </Flex>
-
     <div className={styles.main_div_gameboard}>
       {board.map((el, ri) => {
         return el.map((cel, ci) => {
@@ -192,7 +154,7 @@ return (
         <Heading
           fontFamily={"Helvetica, Arial, Sans-Serif"}
           boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-          color={"#22eaf4"}
+          color={"#22EAF4"}
           fontSize={{ base: "20px", md: "30px", lg: "35px" }}
           fontStyle={"italic"}
         >
@@ -223,15 +185,5 @@ return (
     </Flex>
   </div>
 );
-
 };
-
 export default Maindash;
-
-
-
-
-
-
-
-

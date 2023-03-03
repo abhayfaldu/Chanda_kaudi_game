@@ -9,7 +9,7 @@ import MainRoute from './Routes/MainRoute';
 import Footer from './Components/Home/Footer';
 
 
-interface GameBoardtype {
+
 
 
 export interface GameBoardtype {
