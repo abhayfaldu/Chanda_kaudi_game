@@ -28,6 +28,16 @@ const HomeStyle = {
   })`,
   backgroundPosition: "center",
   backgroundSize: "cover",
+  border:
+    rowind == 0 && colind == 0
+      ? "3px solid green"
+      : rowind == 0 && colind == 4
+      ? "3px solid orange"
+      : rowind == 4 && colind == 4
+      ? "3px solid red"
+      : rowind == 4 && colind == 0
+      ? "3px solid blue"
+      : "3px solid black",
 };
 
   const ChanceofPlayer = (wplaying: number, wcodi: number, diceval: number, codival: string, rowpos: number, colpos: number) => {
