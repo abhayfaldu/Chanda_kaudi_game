@@ -1,4 +1,4 @@
-// get user types
-export const GET_USER_SUCCESS = "user/get/success";
-export const GET_USER_ERROR = "user/get/error";
-export const GET_USER_LOADING = "user/get/loading";
+export const LOGIN_LOADING = "login/loading";
+export const LOGIN_SUCCESS = "login/success";
+export const LOGIN_ERR = "login/error";
+export const LOGOUT = "logout";
