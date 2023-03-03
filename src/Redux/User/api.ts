@@ -1,5 +1,8 @@
 import axios from "axios";
 
-export const getUsersAPI = () => {
-	return axios.get("");
-};
+export const login_api = (email: string, password: string): Promise<any> => {
+	return axios.post("https://different-bat-sun-hat.cyclic.app/users/login", {
+	  email,
+	  password,
+	});
+  };

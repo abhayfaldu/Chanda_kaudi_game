@@ -1,8 +1,13 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import LeaderBoard from './Components/LeaderBoard';
-import Maindash from './Components/MainDash/Maindash';
 
+// import Maindash from './Components/MainDash/Maindash';
+import Navbar from "./Components/Home/Navbar";
+
+import MainRoute from './Routes/MainRoute';
+
+import Footer from './Components/Home/Footer';
+// import Signup from './Page/Signup';
 interface GameBoardtype {
   player1: {
     a: [number, number];
@@ -46,9 +51,11 @@ function App() {
   },[])
 
   return <div className="App">
-    {/* <LeaderBoard /> */}
-
-    <Maindash />
+       <Navbar />
+      <MainRoute/>
+    
+      <Footer/>
+      {/* <Maindash /> */}
   </div>;
 }
 

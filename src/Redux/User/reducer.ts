@@ -1,46 +1,44 @@
 import {
-	GET_USER_ERROR,
-	GET_USER_LOADING,
-	GET_USER_SUCCESS,
-} from "./actionTypes";
-
-export interface userTypes {
-	email: string;
-	image: string;
-	name: string;
-	password: string;
-	_id: string;
-}
-
-export interface stateType {
+	LOGIN_LOADING,
+	LOGIN_ERR,
+	LOGIN_SUCCESS,
+	LOGOUT,
+  } from "./actionTypes";
+  
+  export interface stateType {
 	loading: boolean;
 	error: boolean;
-	userData: userTypes[];
-}
-
-const initialState = {
+	isAuth: boolean;
+	authData: any;
+  }
+  
+  type actionType =
+	| { type: "login/loading" }
+	| { type: "login/success" }
+	| { type: "login/error" }
+	| { type: "logout" };
+  
+  const initialState: stateType = {
 	loading: false,
 	error: false,
-	userData: [],
-};
-
-type actionType =
-	| { type: "user/get/loading"; payload?: userTypes[] }
-	| { type: "user/get/success"; payload?: userTypes[] }
-	| { type: "user/get/error"; payload?: userTypes[] };
-
-export default function userReducer(
-	state: stateType,
+	isAuth: false,
+	authData: null,
+  };
+  
+  export default function authReducer(
+	state: stateType = initialState,
 	action: actionType
-): stateType {
+  ): stateType {
 	switch (action.type) {
-		case GET_USER_LOADING:
-			return { ...state, loading: true };
-		case GET_USER_SUCCESS:
-			return { ...state, loading: false, userData: action.payload || [] };
-		case GET_USER_ERROR:
-			return { ...state, loading: false, error: true };
-		default:
-			return initialState;
+	  case LOGIN_LOADING:
+		return { ...state, loading: true };
+	  case LOGIN_SUCCESS:
+		return { ...state, loading: false, isAuth: true, error: false };
+	  case LOGIN_ERR:
+		return { ...state, loading: false, isAuth: false, error: true };
+	  case LOGOUT:
+		return { ...state, isAuth: false };
+	  default:
+		return state;
 	}
-}
+  }
