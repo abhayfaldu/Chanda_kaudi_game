@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import React, { useEffect, useState } from 'react';
 import styles from "./singlediv.module.css";
 
@@ -11,7 +12,33 @@ stfun: (value: boolean) => void,
 st: boolean
 }
 
+
+
+
+
 const Singlediv: React.FC<SingledivProps> = ({ alldata, rowind, colind, khiladi, dicevalue, stfun, st }) => {
+
+const HomeStyle = {
+  backgroundImage: `url(${
+    rowind == 2 && colind == 2
+      ? `https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/HomeIcon_498245.png`
+      : "none"
+  })`,
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+};
+
+const RedHouseStyle = {
+  backgroundImage: `url(${
+    rowind == 2 && colind == 2
+      ? `https://www.freeiconspng.com/thumbs/homepage-icon-png/home-page-icon-21.png`
+      : "none"
+  })`,
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+};
+
+
 
 const ChanceofPlayer = (wplaying: number, wcodi: number, diceval: number, codival: string, rowpos: number, colpos: number) => {
     let gameboard = JSON.parse(localStorage.getItem("gameboard")!);
@@ -98,18 +125,48 @@ else if (wplaying === 2 && wcodi === 2) { }
 else if(wplaying===3 && wcodi===3){}
 else if(wplaying===4 && wcodi===4){}
 }
-
+ console.log(
+   "alldata",
+   alldata,
+   "rowind",
+   rowind,
+   "colind",
+   colind,
+   "khiladi",
+   khiladi,
+   "dicevalue",
+   dicevalue,
+   "stfun",
+   stfun,
+   "st",
+   st
+ );
 return (
-<div>
-<div className={styles.singlediv_box}>
- {alldata.length!==0 ?
-  alldata.map((el,i)=>{
-     return <button onClick={()=>ChanceofPlayer(khiladi,el.player,dicevalue,el.codi,el.row,el.col)} style={{backgroundColor:`${el.color}`}} className={styles.Singlediv_codi}></button>
-  }) 
-  : null}
-</div>
-</div>
-)
+  <div>
+    <div style={HomeStyle} className={styles.singlediv_box}>
+      {alldata.length !== 0
+        ? alldata.map((el, i) => {
+            return (
+              <button
+                onClick={() =>
+                  ChanceofPlayer(
+                    khiladi,
+                    el.player,
+                    dicevalue,
+                    el.codi,
+                    el.row,
+                    el.col
+                  )
+                }
+                style={{ backgroundColor: `${el.color}` }}
+                className={styles.Singlediv_codi}
+              ></button>
+            );
+          })
+        : null}
+    </div>
+  </div>
+);
 }
 
 export default Singlediv
