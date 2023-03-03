@@ -1,0 +1,18 @@
+.main_div_gameboard_outerdiv{
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 7rem;
+    border: 1px solid black;
+}
+
+.main_div_gameboard{
+    width: 80%;
+    /* height: 60%;  */
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    /* gap: 12px; */
+    margin: auto;
+    border: 1px solid red;
+}

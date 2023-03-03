@@ -1,0 +1,16 @@
+.singlediv_box{
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.Singlediv_codi{
+   height: 32%;
+   width: 12%;
+   border: none;
+   border-radius: 50%;
+}
