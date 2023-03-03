@@ -15,9 +15,12 @@ import {
 import {FaDownload} from 'react-icons/fa'
 import {Link } from 'react-router-dom'
   import logo1 from '../../Utils/gamepad.png'
+import Navbar from './Navbar';
 
 const HomePage = () => {
   return (
+<>
+{/* <Navbar/> */}
 
     <Flex
   direction={{
@@ -118,6 +121,7 @@ const HomePage = () => {
         </Box>
   </Box>
 </Flex>
+</>
   )
 }
 

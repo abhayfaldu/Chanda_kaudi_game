@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import './App.css';
 
-// import Maindash from './Components/MainDash/Maindash';
+
 import Navbar from "./Components/Home/Navbar";
 
 import MainRoute from './Routes/MainRoute';
 
 import Footer from './Components/Home/Footer';
-// import Signup from './Page/Signup';
+
 interface GameBoardtype {
   player1: {
     a: [number, number];
@@ -26,7 +26,7 @@ interface GameBoardtype {
   };
 }
 
-function App() {
+function App()  {
 
   useEffect(()=>{
     let gameboard : GameBoardtype = {
@@ -53,7 +53,6 @@ function App() {
   return <div className="App">
        <Navbar />
       <MainRoute/>
-    
       <Footer/>
       {/* <Maindash /> */}
   </div>;

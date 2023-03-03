@@ -26,7 +26,7 @@ const [board, setBoard] = useState<CellData[][][]>([[[]]]);
 
 useEffect(() => {
   let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
-  console.log(gameboard);
+  // console.log(gameboard);
   
   const mat: CellData[][][] = new Array(5);
   for (let i = 0; i < 5; i++) {

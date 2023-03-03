@@ -10,7 +10,7 @@ const MainRoute = () => {
     <div>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route  path="/login" element={<Login/>}/>
+   <Route  path="/login" element={<Login/>}/>
         <Route  path="/signup" element={<Signup/>}/>
         <Route  path="/gamecontrol" element={<Maindash />}/>
       </Routes>
