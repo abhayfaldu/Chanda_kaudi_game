@@ -82,15 +82,15 @@ The game can be played with a computer opponent, multiplayer game with people fr
 - #### For live Project : -
    - `Vercel`
    
-⭕Steps to run our game:
+##⭕Steps to run our game:
 
 ✨Clone the repository.
 
-✨Run the command "npm install" in both the frontend and backend folders .
+✨Run the command `npm install` in both the frontend and backend folders .
 
-✨Run the command "npm run server" in the backend folder.
+✨Run the command `npm run server` in the backend folder.
 
-✨Run the command "npm start" in the frontend folder run on localhost:3000.
+✨Run the command `npm start` in the frontend folder run on localhost:3000.
 
 
 ![spgmr](https://user-images.githubusercontent.com/107506646/222902675-7e06b37e-bbca-4803-9792-cc6752afee3e.gif)
@@ -159,7 +159,7 @@ graph TD;
 ![Screenshot (1694)](https://user-images.githubusercontent.com/107506646/222924098-79a12e29-f12c-4759-8a2b-46453160125c.png)
 
 
-# DeshboardPage
+# GameboardPage
 
 <img width="1680" alt="Screenshot 2023-03-05 at 12 00 16 AM" src="https://user-images.githubusercontent.com/107506646/222924177-27972250-7f48-4906-ae78-aa0f56ead6d9.png">
 <img width="1680" alt="Screenshot 2023-03-05 at 12 03 45 AM" src="https://user-images.githubusercontent.com/107506646/222924259-cdcf7255-c407-4948-8aea-5a0c4974fd23.png">
