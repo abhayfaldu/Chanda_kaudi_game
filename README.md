@@ -83,10 +83,14 @@ The game can be played with a computer opponent, multiplayer game with people fr
    - `Vercel`
    
 ⭕Steps to run our game:
+
 ✨Clone the repository.
-✨Run the command "npm install" in both the frontend and backend folders.
+
+✨Run the command "npm install" in both the frontend and backend folders .
+
 ✨Run the command "npm run server" in the backend folder.
-✨Run the command "npm start" in the frontend folder.
+
+✨Run the command "npm start" in the frontend folder run on localhost:3000.
 
 
 ![spgmr](https://user-images.githubusercontent.com/107506646/222902675-7e06b37e-bbca-4803-9792-cc6752afee3e.gif)
