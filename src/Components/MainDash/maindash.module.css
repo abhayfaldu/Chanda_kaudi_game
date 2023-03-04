@@ -1,5 +1,12 @@
+.maindash_div_main_outerdiv{
+    /* border: 3px solid red; */
+    padding: 0px;
+    width: 100%;
+}
+
+
 .main_div_gameboard_outerdiv{
-    width: 60%;
+    width: 90%;
     height: 95vh;
     background: url('https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/w4_922344.jpeg');
      background-repeat: no-repeat;

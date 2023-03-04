@@ -61,12 +61,12 @@ export interface PlayerType {
 
 
 
-const LeaderBoard = ()=>{
+const LeaderBoard = ({curState}:any)=>{
     const [playersDetail, setplayerDetail] = useState<PlayerType[]>([]);
 
      useEffect(()=>{
        getData()
-     },[]);
+     },[curState]);
 
      const getData=async()=>{
         // try{

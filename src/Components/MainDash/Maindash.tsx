@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GameBoardtype as GameData, socketType } from "../../App";
 import KaudiModal from "../KaudiModal";
+import LeaderBoard from "../LeaderBoard";
 import Singlediv from "../SingleDiv/Singlediv";
 import styles from "./maindash.module.css";
 
@@ -307,7 +308,7 @@ const Maindash = (props: MaindashProps) => {
 	};
 
 	return (
-		<>
+		<div className={styles.maindash_div_main_outerdiv}>
 			<div className={styles.main_div_gameboard_outerdiv}>
 				<Flex align={"center"} justify={"center"} gap={"10px"}>
 					<Image
@@ -416,7 +417,7 @@ const Maindash = (props: MaindashProps) => {
 				</Box>
 			</div>
 
-			<Flex direction="column">
+			{/* <Flex direction="column">
 				<Box
 					display="flex"
 					alignItems="center"
@@ -444,8 +445,9 @@ const Maindash = (props: MaindashProps) => {
 						</Link>
 					</ButtonGroup>
 				</Box>
-			</Flex>
-		</>
+			</Flex> */}
+      <LeaderBoard  curState={state}/>
+		</div>
 	);
 };
 
