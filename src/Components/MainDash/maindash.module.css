@@ -60,7 +60,7 @@
     color: beige;
     height: 40px;
     border: 0px solid red;
-    width: 60%;
+    width: 40%;
     font-size: 15px;
     letter-spacing: 1px;
     font-weight: bold;
@@ -119,3 +119,23 @@
   75%{color:rgb(140, 250, 232);}
   100% {color: rgb(230, 163, 233);}
 }
+
+.RestartBtn{
+    
+    color: beige;
+    height: 40px;
+    border: 0px solid red;
+    width: 30%;
+    font-size: 20px;
+    border-radius: 15px;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-weight: bold;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.RestartBtn:hover{
+    cursor: pointer;
+     border: 3px solid greenyellow;
+}
+

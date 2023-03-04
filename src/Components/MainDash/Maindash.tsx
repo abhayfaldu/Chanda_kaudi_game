@@ -2,9 +2,15 @@ import React, { useEffect, useState } from 'react';
 import Singlediv from '../SingleDiv/Singlediv';
 import styles from "./maindash.module.css";
 
-import { Flex, Image, Box, Heading , Button ,ButtonGroup ,Stack} from "@chakra-ui/react";
+
+
+
+import KaudiModal from '../KaudiModal';
+
+import { Flex, Image, Box, Heading , Button ,ButtonGroup ,Stack,useDisclosure} from "@chakra-ui/react";
 import { GameBoardtype as GameData } from "../../App";
 import { Link } from 'react-router-dom';
+
 
 
 
@@ -21,6 +27,9 @@ const Maindash: React.FC = () => {
   const [chance, setChance] = useState<number>(1);
   const [dice, setDice] = useState<number>(0);
   const [board, setBoard] = useState<CellData[][][]>([[[]]]);
+
+
+   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
@@ -127,10 +136,18 @@ const Maindash: React.FC = () => {
 
     const random: number = Math.ceil(Math.random() * 5);
     setDice(random);
+
+    onOpen()
+  
+
+
   };
 
 
   const RestartGame = () => {
+
+    
+
     let gameboard: GameData = {
       player1: {
         a: [0, 0],
@@ -159,86 +176,127 @@ const Maindash: React.FC = () => {
     }
 
     localStorage.setItem("gameboard", JSON.stringify(gameboard));
+
     setDice(0)
     setChance(1)
     setState(!state)
   }
 
 
-  return (
-    <>
- 
-    <div className={styles.main_div_gameboard_outerdiv}>
-      <Flex align={"center"} justify={"center"} gap={"10px"}>
-        <Image
-          w={"35px"}
-          h={"35px"}
-          boxShadow="rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
-          borderRadius={"50%"}
-          src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/Gaming%20logo1_573500.png"
-          alt="Kaudi"
-        />
-        <h1 className={styles.heading}>CHANDA KAUDI</h1>
-      </Flex>
 
-      <div className={styles.main_div_gameboard}>
-        {board.map((el, ri) => {
-          return el.map((cel, ci) => {
-            return (
-              <Singlediv key={Date.now() + Math.random() * 7} alldata={[...cel]} dicefun={setDice} stfun={setState} st={state} rowind={ri} colind={ci} khiladifun={setChance} khiladi={chance} dicevalue={dice} />
-            );
-          });
-        })}
-      </div>
+return (
+<>
+<div className={styles.main_div_gameboard_outerdiv}>
+    <Flex align={"center"} justify={"center"} gap={"10px"}>
+      <Image
+        w={"35px"}
+        h={"35px"}
+        boxShadow="rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
+        borderRadius={"50%"}
+        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/Gaming%20logo1_573500.png"
+        alt="Kaudi"
+      />
+      <h1 className={styles.heading}>Chanda Kaudi</h1>
+    </Flex>
+
+    <div className={styles.main_div_gameboard}>
+      {board.map((el, ri) => {
+        return el.map((cel, ci) => {
+          return (
+            <Singlediv
+              key={Date.now() + Math.random() * 7}
+              alldata={[...cel]}
+              dicefun={setDice}
+              stfun={setState}
+              st={state}
+              rowind={ri}
+              colind={ci}
+              khiladifun={setChance}
+              khiladi={chance}
+              dicevalue={dice}
+            />
+          );
+        });
+      })}
+    </div>
+    <Flex
+      border={"0px solid black"}
+      align={"center"}
+      justify={"space-between"}
+      h={"60px"}
+      p={4}
+      m={"auto"}
+      mt={"10px"}
+      w={"80%"}
+      borderRadius="10px"
+    >
+      <Box
+        border={"0px solid blue"}
+        w={"fit-content"}
+        background="#dddcdb"
+        p={1}
+        borderRadius={"8px"}
+      >
+        {" "}
+        <Heading
+          fontFamily={"Helvetica, Arial, Sans-Serif"}
+          boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+          color={
+            chance == 1
+              ? "green"
+              : chance == 2
+              ? "orange"
+              : chance == 3
+              ? "red"
+              : "blue"
+          }
+          fontSize={{ base: "18px", md: "25px", lg: "35px" }}
+          fontStyle={"italic"}
+        >
+          Player - {chance}
+        </Heading>
+      </Box>
       <Flex
-        border={"0px solid black"}
+        w={"65%"}
+        border={"0px solid white"}
         align={"center"}
         justify={"space-between"}
-        h={"60px"}
-        p={4}
-        m={"auto"}
-        mt={"10px"}
-        w={"80%"}
-        borderRadius="10px"
+        gap={{ base: "8px", md: "20px", lg: "20px" }}
       >
-        <Box w={"fit-content"}>
-          {" "}
-          <Heading
-            fontFamily={"Helvetica, Arial, Sans-Serif"}
-            boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-            color={"#22eaf4"}
-            fontSize={{ base: "20px", md: "30px", lg: "35px" }}
-            fontStyle={"italic"}
-          >
-            Player - {chance}
-          </Heading>
-        </Box>
-        <Flex
-          w={"50%"}
-          border={"0px solid white"}
-          align={"center"}
-          justify={"space-between"}
+        <Box
+          color={"black"}
+          fontSize={{ base: "25px", md: "30px", lg: "35px" }}
+          fontWeight={"bold"}
+          bg={"#75f7f9"}
+          w={{ base: "40px", md: "60px", lg: "60px" }}
+          borderRadius={"8px"}
         >
-          <Box
-            color={"black"}
-            fontSize={{ base: "25px", md: "30px", lg: "35px" }}
-            fontWeight={"bold"}
-            bg={"yellow"}
-            w={{ base: "40px", md: "60px", lg: "60px" }}
-            borderRadius={"8px"}
-          >
-            {dice}
-          </Box>
-          <button className={styles.Throwbtn} onClick={Generateno}>
-            THROW
-          </button>
-          <button onClick={RestartGame}>Restart</button>
-        </Flex>
+          {dice}
+        </Box>
+        <button className={styles.Throwbtn} onClick={Generateno}>
+          THROW
+        </button>
+        <Image
+          alt="restart"
+          src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-04/restartup_233989.jpeg"
+          className={styles.RestartBtn}
+          onClick={RestartGame}
+        ></Image>
       </Flex>
+    </Flex>
+    <Box display={"none"}>
+      <KaudiModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        dice={dice}
+      />
+    </Box>
+  </div>
 
-    </div>
-    
-    
+
+
+ 
     <Flex direction='column' >
   <Box
     display='flex'
