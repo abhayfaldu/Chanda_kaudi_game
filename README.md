@@ -48,6 +48,9 @@ The game can be played with a computer opponent, multiplayer game with people fr
 <br>
 
 💻 Projectlogo :- 
+
+
+
 ![Logo_Chanda_Kaudi (1)](https://user-images.githubusercontent.com/107506646/222923347-a8f140f2-1e25-4d9a-a77c-2f8a284b6b38.png)
 
  
@@ -67,10 +70,10 @@ The game can be played with a computer opponent, multiplayer game with people fr
 - #### For Backend :-
    - `NodeJS`
    - `ExpressJS`
-   
+    - `MongoDB `
 
 - #### For deploy database :- 
- - `MongoDB `
+
    - `cyclic `
 
 - #### For Styling :-  
