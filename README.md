@@ -148,12 +148,6 @@ graph TD;
 
 
 
-#  Payment 
-
-
-# Admin & AdminDeshboard
-
-
 ---
 
 
