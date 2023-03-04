@@ -1,4 +1,4 @@
-> 💻 PROJECT NAME⭐ ====>>>> 🌙CHANDA KAUDI
+> 💻 PROJECT NAME -------------> CHANDA KAUDI🎮
 
 <br>
 
@@ -39,16 +39,16 @@ The game can be played with a computer opponent, multiplayer game with people fr
 
 | Collaborators | Github                                                                                                                                   | Linkedin                                                                                                                                                            | Portfolio                                                                                                                                    |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Shikha Gupta  (Team Lead)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shikhu51197/)| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shikha-gupta-12a2b5199) |[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://shikhu51197.github.io/) | 
-| Mandar Deshmukh (Member 1) | [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DeshmukhMandar3) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mandar-deshmukh-62821b189/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://deshmukhmandar3.github.io/) |
-| R Giri Reddy (Member 2) | [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/geraltyen) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giri-reddy-geralt/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](http://geraltyen.github.io) |
-| Kallol Sarkar (Member 3)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kallol0011) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kallol-sarkar-229000210/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://kallol0011.github.io/) |
-| Himanshu Sharma (Member 4)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/himanshu7582901182) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himanshu-sharma7/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://himanshu7582901182.github.io/) |
+| Shikha Gupta  (Member 1)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shikhu51197/)| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shikha-gupta-12a2b5199) |[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://shikhu51197.github.io/) | 
+| Mandar Deshmukh (Member 2) | [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DeshmukhMandar3) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mandar-deshmukh-62821b189/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://deshmukhmandar3.github.io/) |
+| R Giri Reddy (Member 3) | [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/geraltyen) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giri-reddy-geralt/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](http://geraltyen.github.io) |
+| Kallol Sarkar (Member 4)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kallol0011) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kallol-sarkar-229000210/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://kallol0011.github.io/) |
+
 
 <br>
 
 💻 Projectlogo :- 
-https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/Gaming%20logo1_573500.png
+
  
 
 ---
@@ -77,8 +77,11 @@ https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/Gamin
 
 - #### For live Project : -
    - `Vercel`
+   - 
+![spgmr](https://user-images.githubusercontent.com/107506646/222902675-7e06b37e-bbca-4803-9792-cc6752afee3e.gif)
+![th](https://user-images.githubusercontent.com/107506646/222903035-abbafa48-3b4d-4ccc-9a5b-e7fa156038b8.jpg)
 
-![ShopGIF](https://media.giphy.com/media/26BRrcK4dXrxl817q/giphy.gif)
+
 
 ---
 ## Features ✨:-
@@ -86,11 +89,11 @@ https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/Gamin
  | Serial No            | Feature                                                              |
 | ----------------- | ------------------------------------------------------------------ |
 | 1 | User signup and Login |
-| 2 | Products Page with Filter and Sort Functionalities |
-| 3 | Dynamic SinglePage & payment feature |
-| 4 | Dynamic cart page using userId |
-| 5 | Admin Login & Deshboard Page |
-| 6 | Homepage & Reservation Page |
+| 2 | Home Page  |
+| 3 | Dashboard Page  |
+| 4 | LeaderBoard  Page|
+| 5 | navbar , footer |
+| 6 | demo video , about game ,rules and history of game |
 
 ---
 # Package.json(Dependency)✨:-
