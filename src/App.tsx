@@ -1,16 +1,25 @@
 import React, { useEffect } from 'react';
 import './App.css';
 
-// import Maindash from './Components/MainDash/Maindash';
+
 import Navbar from "./Components/Home/Navbar";
 
 import MainRoute from './Routes/MainRoute';
 
 import Footer from './Components/Home/Footer';
-import KaudiModal from './Components/KaudiModal';
+
+
 // import Signup from './Page/Signup';
+
+
+
+
+
+
+
 export interface GameBoardtype {
-  player1: {
+
+ player1: {
     a: [number, number];
     b: [number, number];
     c: [number, number];
@@ -36,7 +45,7 @@ export interface GameBoardtype {
   };
 }
 
-function App() {
+function App()  {
 
   useEffect(()=>{
     let gameboard : GameBoardtype = {
@@ -57,6 +66,10 @@ function App() {
         b : [4,4],
         c : [4,4],
         d : [4,4],
+        // a : [2,2],
+        // b : [2,2],
+        // c : [2,2],
+        // d : [2,2],
       },
       player4 : {
         a : [4,0],
@@ -72,8 +85,10 @@ function App() {
   return <div className="App">
        <Navbar />
       <MainRoute/>
+
        <Footer />
       
+
   </div>;
 }
 

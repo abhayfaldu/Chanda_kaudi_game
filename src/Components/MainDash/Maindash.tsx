@@ -2,9 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Singlediv from '../SingleDiv/Singlediv';
 import styles from "./maindash.module.css";
 
-import { Flex, Image, Box, Heading, useDisclosure } from "@chakra-ui/react";
-import { GameBoardtype as GameData } from "../../App";
+
+
+
 import KaudiModal from '../KaudiModal';
+
+import { Flex, Image, Box, Heading , Button ,ButtonGroup ,Stack,useDisclosure} from "@chakra-ui/react";
+import { GameBoardtype as GameData } from "../../App";
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,7 +33,7 @@ const Maindash: React.FC = () => {
 
   useEffect(() => {
     let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
-    
+
 
     const mat: CellData[][][] = new Array(5);
     for (let i = 0; i < 5; i++) {
@@ -95,50 +100,93 @@ const Maindash: React.FC = () => {
     setBoard(mat);
   }, [state]);
 
-  const Generateno = () => {
-    const random = Math.ceil(Math.random() * 5);
+
+  const Generateno = (): void => {
+    if (dice) {
+      return;
+    }
+
+    let gameboard: any = JSON.parse(localStorage.getItem("gameboard")!);
+    let gameArr: any[] = new Array(4);
+
+    let i: number = 0;
+    for (let player in gameboard) {
+      gameArr[i] = gameboard[player];
+      i++;
+    }
+    let p: number = 1;
+    while (p < chance) {
+      gameArr.push(gameArr.shift());
+      p++;
+    }
+
+    for (let i: number = 0; i < 5; i++) {
+      let count: number = 0;
+      for (let playerchance in gameArr[i]) {
+        if (gameArr[i][playerchance][0] === 2 && gameArr[i][playerchance][1] === 2) {
+          count++;
+        }
+      }
+      if (count === 4) {
+        setChance(prev => (prev === 4 ? 1 : prev + 1));
+      } else {
+        break;
+      }
+    }
+
+    const random: number = Math.ceil(Math.random() * 5);
     setDice(random);
+
     onOpen()
   
+
+
   };
 
+
   const RestartGame = () => {
-    let gameboard : GameData = {
-        player1 : {
-          a : [0,0],
-          b : [0,0],
-          c : [0,0],
-          d : [0,0],
-        },
-        player2 : {
-          a : [0,4],
-          b : [0,4],
-          c : [0,4],
-          d : [0,4],
-        },
-        player3 : {
-          a : [4,4],
-          b : [4,4],
-          c : [4,4],
-          d : [4,4],
-        },
-        player4 : {
-          a : [4,0],
-          b : [4,0],
-          c : [4,0],
-          d : [4,0],
-        },
-      }
+
     
-    localStorage.setItem("gameboard",JSON.stringify(gameboard));
+
+    let gameboard: GameData = {
+      player1: {
+        a: [0, 0],
+        b: [0, 0],
+        c: [0, 0],
+        d: [0, 0],
+      },
+      player2: {
+        a: [0, 4],
+        b: [0, 4],
+        c: [0, 4],
+        d: [0, 4],
+      },
+      player3: {
+        a: [4, 4],
+        b: [4, 4],
+        c: [4, 4],
+        d: [4, 4],
+      },
+      player4: {
+        a: [4, 0],
+        b: [4, 0],
+        c: [4, 0],
+        d: [4, 0],
+      },
+    }
+
+    localStorage.setItem("gameboard", JSON.stringify(gameboard));
+
     setDice(0)
     setChance(1)
     setState(!state)
-}
+  }
+
 
 
 return (
-  <div className={styles.main_div_gameboard_outerdiv}>
+<>
+<div className={styles.main_div_gameboard_outerdiv}>
     <Flex align={"center"} justify={"center"} gap={"10px"}>
       <Image
         w={"35px"}
@@ -245,16 +293,43 @@ return (
       />
     </Box>
   </div>
-);
+
+
+
+ 
+    <Flex direction='column' >
+  <Box
+    display='flex'
+    alignItems='center'
+    justifyContent='center'
+    width='40%'
+    margin={"auto"}
+    py={12}
+    bgImage="url('https://tse4.mm.bing.net/th?id=OIP.TApezryjLkp4U5NfzannRgHaEo&pid=Api&P=0')"
+    bgPosition='center'
+    bgRepeat='no-repeat'
+  marginTop={20}
+  marginBottom={20}
+    mb={2}
+  >
+    <ButtonGroup gap='4'>
+      <Link to = "/">
+      <Button bg='orange' variant='outline' color="white.50" >GO TO HOME</Button></Link>
+      <Link to ="/leaderboard">
+      <Button bg='purple' variant='outline'color="white.50">SHOW LEADERBOARD</Button></Link>
+    </ButtonGroup>
+  </Box>
+    </Flex>
+
+
+
+
+
+
+
+</>
+  );
 
 };
 
 export default Maindash;
-
-
-
-
-
-
-
-

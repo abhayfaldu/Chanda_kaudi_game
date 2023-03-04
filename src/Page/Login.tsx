@@ -22,6 +22,7 @@ import { useSelector } from "react-redux/es/exports";
 import { stateType } from "../Redux/User/reducer";
 import { auth_login } from "../Redux/User/action";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Components/Home/Navbar";
 
 interface Props {
   email: string;
@@ -29,17 +30,17 @@ interface Props {
 }
 
 const formData: Props = {
-  email: "abhayfaldu@gmail.com",
-  password: "abhay",
+  email: "",
+  password: "",
 };
 
 const Login = () => {
   // State maintained for Input tags
   const [Form, setForm] = useState<Props>(formData);
-
+  const navigate = useNavigate();
   const state: stateType = useSelector((state: any) => state.AuthManager);
   const { isAuth, loading, error } = state;
-  console.log(isAuth);
+
 
   //Login Success toast
   const toast = useToast({
@@ -51,7 +52,7 @@ const Login = () => {
 
   //Partially filled form
   const partial = useToast({
-    title: `Kinldy fill all the detials`,
+    title: `User not Exists`,
     status: "warning",
     isClosable: true,
     position: "top",
@@ -69,20 +70,47 @@ const Login = () => {
 
   const dispatch: any = useDispatch();
 
-  const handleSubmit = () => {
-    if (Form.email == "" || Form.password == "") {
-      partial();
-    } else {
-      dispatch(auth_login(Form.email, Form.password));
-    }
-  };
+  // const handleSubmit = () => {
+  //   if (Form.email == "" || Form.password == "") {
+  //     partial();
+  //   } else {
+  //     dispatch(auth_login(Form.email, Form.password));
+  //     toast()
+  //     navigate("/");
+  //   }
+  // };
+  let data: Props[] = JSON.parse(localStorage.getItem("User") || "[]");
 
-  const navigate = useNavigate();
-  if (isAuth && !error) {
-    navigate("/");
+const handleSubmit = (): void => {
+  console.log(Form.email , Form.password)
+  let b = false;
+
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].email === Form.email) {
+      if (data[i].password === Form.password) {
+        toast()
+        b = true;
+        localStorage.setItem("userloggedin", JSON.stringify(data[i]));
+       navigate("/")
+        return;
+      } else {
+        
+        Error()
+        return;
+      }
+    }
   }
-  // Change state "form" as per changes in input tags
+
+  if (b === false) {
+   partial()
+  }
+};
+
+
   return (
+    <>
+    {/* <Navbar/> */}
+   
     <Flex align="center" justifyContent={"center"} >
       
 
@@ -155,6 +183,7 @@ const Login = () => {
 
 
     </Flex>
+     </>
   );
 };
 
