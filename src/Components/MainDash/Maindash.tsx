@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Singlediv from '../SingleDiv/Singlediv';
 import styles from "./maindash.module.css";
 
-import { Flex, Image, Box, Heading } from "@chakra-ui/react";
+import { Flex, Image, Box, Heading , Button ,ButtonGroup ,Stack} from "@chakra-ui/react";
 import { GameBoardtype as GameData } from "../../App";
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -166,6 +166,8 @@ const Maindash: React.FC = () => {
 
 
   return (
+    <>
+ 
     <div className={styles.main_div_gameboard_outerdiv}>
       <Flex align={"center"} justify={"center"} gap={"10px"}>
         <Image
@@ -176,7 +178,7 @@ const Maindash: React.FC = () => {
           src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/Gaming%20logo1_573500.png"
           alt="Kaudi"
         />
-        <h1 className={styles.heading}>Ashta Chamma</h1>
+        <h1 className={styles.heading}>CHANDA KAUDI</h1>
       </Flex>
 
       <div className={styles.main_div_gameboard}>
@@ -233,7 +235,41 @@ const Maindash: React.FC = () => {
           <button onClick={RestartGame}>Restart</button>
         </Flex>
       </Flex>
+
     </div>
+    
+    
+    <Flex direction='column' >
+  <Box
+    display='flex'
+    alignItems='center'
+    justifyContent='center'
+    width='40%'
+    margin={"auto"}
+    py={12}
+    bgImage="url('https://tse4.mm.bing.net/th?id=OIP.TApezryjLkp4U5NfzannRgHaEo&pid=Api&P=0')"
+    bgPosition='center'
+    bgRepeat='no-repeat'
+  marginTop={20}
+  marginBottom={20}
+    mb={2}
+  >
+    <ButtonGroup gap='4'>
+      <Link to = "/">
+      <Button bg='orange' variant='outline' color="white.50" >GO TO HOME</Button></Link>
+      <Link to ="/leaderboard">
+      <Button bg='purple' variant='outline'color="white.50">SHOW LEADERBOARD</Button></Link>
+    </ButtonGroup>
+  </Box>
+    </Flex>
+
+
+
+
+
+
+
+</>
   );
 
 };
