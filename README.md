@@ -135,23 +135,33 @@ graph TD;
 ---
 
 # HomePage
+![Screenshot (1695)](https://user-images.githubusercontent.com/107506646/222924091-0e918d6a-8904-4ce1-9f83-6886b382eebf.png)
 
+![Screenshot (1696)](https://user-images.githubusercontent.com/107506646/222924124-29e95283-f287-4ea4-b72f-914a5be75e3b.png)
 
+![Screenshot (1691)](https://user-images.githubusercontent.com/107506646/222924130-ed4b06c3-015f-497d-8658-2befc6bdf3a8.png)
 
 
 # Signup Page 
 
 
+![Screenshot (1693)](https://user-images.githubusercontent.com/107506646/222924095-64c03c7f-fb3a-4e57-8cf1-70507032b7dc.png)
 
 # LoginPage
 
+![Screenshot (1694)](https://user-images.githubusercontent.com/107506646/222924098-79a12e29-f12c-4759-8a2b-46453160125c.png)
 
 
 # DeshboardPage
 
+<img width="1680" alt="Screenshot 2023-03-05 at 12 00 16 AM" src="https://user-images.githubusercontent.com/107506646/222924177-27972250-7f48-4906-ae78-aa0f56ead6d9.png">
+<img width="1680" alt="Screenshot 2023-03-05 at 12 03 45 AM" src="https://user-images.githubusercontent.com/107506646/222924259-cdcf7255-c407-4948-8aea-5a0c4974fd23.png">
 
+<img width="1680" alt="Screenshot 2023-03-05 at 12 02 52 AM" src="https://user-images.githubusercontent.com/107506646/222924267-5a2210db-b46e-4e10-b449-3d8615b014c0.png">
+<img width="1680" alt="Screenshot 2023-03-05 at 12 01 43 AM" src="https://user-images.githubusercontent.com/107506646/222924275-ed830ea9-39dc-4f7c-a80d-b01e7a36e603.png">
 
 # LeaderBoardPage
+<img width="1036" alt="Screenshot 2023-03-05 at 12 04 03 AM" src="https://user-images.githubusercontent.com/107506646/222924252-f817a535-3a7d-4fce-97ae-1d312458397e.png">
 
 
 
