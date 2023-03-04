@@ -6,7 +6,7 @@
 <a href="https://drive.google.com/file/d/19gKWKiF6bSgZI0X1FsSb8hXZCgM0KGvg/view?usp=share_link">![Demo video of Game](https://img.shields.io/badge/Demo_Video_Of_Game-Click_ME-brightgreen.svg?style=plastic&logo=YouTube&logoColor=red)</a>
 
 [![Backend Repo Link](https://img.shields.io/badge/Backend_Repo_Link-0A66C2?style=for-the-badge&logo=github&logoColor=#FF7139)](https://github.com/abhayfaldu/abashed-store-5188-backend)
-[![Deploy to Cyclic](https://img.shields.io/badge/Deployed_Cyclic_Link-0A66C2?style=for-the-badge&logo=ko-fi&logoColor=white)](https://different-bat-sun-hat.cyclic.app
+[![Backend Deploy to Cyclic](https://img.shields.io/badge/Backend_Deployed_Cyclic_Link-0A66C2?style=for-the-badge&logo=ko-fi&logoColor=white)](https://different-bat-sun-hat.cyclic.app
 )
 
 [![Deployed App Vercel Link](https://img.shields.io/badge/Deployed_App_Vercel_Link-000?style=for-the-badge&logo=ko-fi&logoColor=white)]()
