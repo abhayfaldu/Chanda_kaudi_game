@@ -1,6 +1,11 @@
 import { url } from 'inspector';
 import React, { useEffect, useState } from 'react';
 import styles from "./singlediv.module.css";
+import RedArrow from "../../Utils/RedArrow.png";
+import BlueArrow from "../../Utils/BlueArrow.png";
+import GreenArrow from "../../Utils/GreenARROW.png";
+import OrangeArrow from "../../Utils/OrangeARROW.png";
+
 
 interface SingledivProps {
   alldata: { player: number, codi: string, row: number, col: number, color: string }[],
@@ -24,7 +29,20 @@ const HomeStyle = {
   backgroundImage: `url(${
     rowind == 2 && colind == 2
       ? `https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/HomeIcon_498245.png`
-      : "none"
+      : rowind == 1 && colind == 0
+      ? GreenArrow
+      : rowind == 0 && colind == 3
+      ? OrangeArrow
+      : rowind == 4 && colind == 1
+      ? BlueArrow
+      : rowind == 3 && colind == 4
+      ? RedArrow
+      :  rowind == 1 && colind == 2
+      ? OrangeArrow: rowind == 2 && colind == 1
+      ? GreenArrow: rowind == 3 && colind == 2
+      ? BlueArrow: rowind == 2 && colind == 3
+      ? RedArrow:"none"
+      
   })`,
   backgroundPosition: "center",
   backgroundSize: "cover",

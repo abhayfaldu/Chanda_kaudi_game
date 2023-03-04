@@ -7,6 +7,7 @@ import Navbar from "./Components/Home/Navbar";
 import MainRoute from './Routes/MainRoute';
 
 import Footer from './Components/Home/Footer';
+import KaudiModal from './Components/KaudiModal';
 // import Signup from './Page/Signup';
 export interface GameBoardtype {
   player1: {
@@ -71,9 +72,8 @@ function App() {
   return <div className="App">
        <Navbar />
       <MainRoute/>
-    
-      <Footer/>
-      {/* <Maindash /> */}
+       <Footer />
+      
   </div>;
 }
 

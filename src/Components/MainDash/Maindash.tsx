@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Singlediv from '../SingleDiv/Singlediv';
 import styles from "./maindash.module.css";
 
-import { Flex, Image, Box, Heading } from "@chakra-ui/react";
+import { Flex, Image, Box, Heading, useDisclosure } from "@chakra-ui/react";
 import { GameBoardtype as GameData } from "../../App";
+import KaudiModal from '../KaudiModal';
 
 
 
@@ -21,6 +22,9 @@ const Maindash: React.FC = () => {
   const [chance, setChance] = useState<number>(1);
   const [dice, setDice] = useState<number>(0);
   const [board, setBoard] = useState<CellData[][][]>([[[]]]);
+
+
+   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
@@ -94,6 +98,7 @@ const Maindash: React.FC = () => {
   const Generateno = () => {
     const random = Math.ceil(Math.random() * 5);
     setDice(random);
+    onOpen()
   
   };
 
@@ -125,7 +130,7 @@ const Maindash: React.FC = () => {
         },
       }
     
-      localStorage.setItem("gameboard",JSON.stringify(gameboard));
+    localStorage.setItem("gameboard",JSON.stringify(gameboard));
     setDice(0)
     setChance(1)
     setState(!state)
@@ -143,14 +148,25 @@ return (
         src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-03/Gaming%20logo1_573500.png"
         alt="Kaudi"
       />
-      <h1 className={styles.heading}>Ashta Chamma</h1>
+      <h1 className={styles.heading}>Chanda Kaudi</h1>
     </Flex>
 
     <div className={styles.main_div_gameboard}>
       {board.map((el, ri) => {
         return el.map((cel, ci) => {
           return (
-           <Singlediv key={Date.now()+Math.random()*7} alldata={[...cel]} dicefun={setDice}  stfun={setState} st={state} rowind={ri} colind={ci} khiladifun={setChance} khiladi={chance} dicevalue={dice} />
+            <Singlediv
+              key={Date.now() + Math.random() * 7}
+              alldata={[...cel]}
+              dicefun={setDice}
+              stfun={setState}
+              st={state}
+              rowind={ri}
+              colind={ci}
+              khiladifun={setChance}
+              khiladi={chance}
+              dicevalue={dice}
+            />
           );
         });
       })}
@@ -166,29 +182,44 @@ return (
       w={"80%"}
       borderRadius="10px"
     >
-      <Box w={"fit-content"}>
+      <Box
+        border={"0px solid blue"}
+        w={"fit-content"}
+        background="#dddcdb"
+        p={1}
+        borderRadius={"8px"}
+      >
         {" "}
         <Heading
           fontFamily={"Helvetica, Arial, Sans-Serif"}
           boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-          color={"#22eaf4"}
-          fontSize={{ base: "20px", md: "30px", lg: "35px" }}
+          color={
+            chance == 1
+              ? "green"
+              : chance == 2
+              ? "orange"
+              : chance == 3
+              ? "red"
+              : "blue"
+          }
+          fontSize={{ base: "18px", md: "25px", lg: "35px" }}
           fontStyle={"italic"}
         >
           Player - {chance}
         </Heading>
       </Box>
       <Flex
-        w={"50%"}
+        w={"65%"}
         border={"0px solid white"}
         align={"center"}
         justify={"space-between"}
+        gap={{ base: "8px", md: "20px", lg: "20px" }}
       >
         <Box
           color={"black"}
           fontSize={{ base: "25px", md: "30px", lg: "35px" }}
           fontWeight={"bold"}
-          bg={"yellow"}
+          bg={"#75f7f9"}
           w={{ base: "40px", md: "60px", lg: "60px" }}
           borderRadius={"8px"}
         >
@@ -197,9 +228,22 @@ return (
         <button className={styles.Throwbtn} onClick={Generateno}>
           THROW
         </button>
-        <button onClick={RestartGame}>Restart</button>
+        <Image
+          alt="restart"
+          src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-04/restartup_233989.jpeg"
+          className={styles.RestartBtn}
+          onClick={RestartGame}
+        ></Image>
       </Flex>
     </Flex>
+    <Box display={"none"}>
+      <KaudiModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        dice={dice}
+      />
+    </Box>
   </div>
 );
 
