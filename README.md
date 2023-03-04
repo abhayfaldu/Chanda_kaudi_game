@@ -93,7 +93,7 @@ The game can be played with a computer opponent, multiplayer game with people fr
 | 3 | Dashboard Page  |
 | 4 | LeaderBoard  Page|
 | 5 | navbar , footer |
-| 6 | demo video , about game ,rules and history of game |
+| 6 | demo video , about game and rules  |
 
 ---
 # Package.json(Dependency)✨:-
