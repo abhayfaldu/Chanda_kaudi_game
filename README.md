@@ -51,8 +51,6 @@ The game can be played with a computer opponent, multiplayer game with people fr
 💻 Projectlogo :- 
 
 
-
-
  ![Logo_Chanda_Kaudi](https://user-images.githubusercontent.com/107506646/222924374-0631c640-ee40-444c-9e3e-f87dc8913e67.png)
 
 
@@ -72,7 +70,7 @@ The game can be played with a computer opponent, multiplayer game with people fr
    - `NodeJS`
    - `ExpressJS`
     - `MongoDB `
-     - `Socket`
+    - `Socket`
 - #### For deploy database :- 
 
    - `cyclic `
@@ -83,8 +81,12 @@ The game can be played with a computer opponent, multiplayer game with people fr
 
 - #### For live Project : -
    - `Vercel`
-   
-
+   
+⭕Steps to run our game:
+✨Clone the repository.
+✨Run the command "npm install" in both the frontend and backend folders.
+✨Run the command "npm run server" in the backend folder.
+✨Run the command "npm start" in the frontend folder.
 
 
 ![spgmr](https://user-images.githubusercontent.com/107506646/222902675-7e06b37e-bbca-4803-9792-cc6752afee3e.gif)
