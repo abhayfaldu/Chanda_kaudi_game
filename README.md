@@ -82,7 +82,7 @@ The game can be played with a computer opponent, multiplayer game with people fr
 
 
 ![spgmr](https://user-images.githubusercontent.com/107506646/222902675-7e06b37e-bbca-4803-9792-cc6752afee3e.gif)
-![th](https://user-images.githubusercontent.com/107506646/222903554-4a2da394-1903-4cef-bba0-4c443a039754.jpg)
+
 
 ---
 ## Features ✨:-
