@@ -42,14 +42,20 @@ const mydata = [
 
 
 
+// export interface PlayerType {
+//   id: number;
+//   name: String;
+//   email: String;
+//   status: String;
+//   score: number;
+// }
 export interface PlayerType {
   id: number;
   name: String;
-  email: String;
-  status: String;
-  score: number;
+  email: number;
+  status: number;
+  score: String;
 }
-
 
 
 
@@ -63,16 +69,68 @@ const LeaderBoard = ()=>{
      },[]);
 
      const getData=async()=>{
-        try{
-         let res = await axios.get("https://jsonplaceholder.typicode.com/users?limit=10");
+        // try{
+        //  let res = await axios.get("https://jsonplaceholder.typicode.com/users?limit=10");
           
-          setplayerDetail(mydata);
-          console.log("Players Data", mydata);
+          // setplayerDetail(mydata);
+          // console.log("Players Data", mydata);
 
+        // }
+        // catch(e){
+        //     console.log(e)
+        // }  
+
+        let gameboard = JSON.parse(localStorage.getItem("gameboard")!);
+        let leaderboardArr = [];
+        let ind = 1;
+        for (let player in gameboard) {
+          let curstatus = "Playing";
+          let start = 0;
+          let home = 0;
+          for (let playcodi in gameboard[player]) {
+              if (player === "player1") {
+                if (gameboard[player][playcodi][0] === 2 && gameboard[player][playcodi][1] === 2) {
+                  home++
+                }
+                else if(gameboard[player][playcodi][0] === 0 && gameboard[player][playcodi][1] === 0){
+                  start++
+                }
+              }
+              if (player === "player2") {
+                if (gameboard[player][playcodi][0] === 2 && gameboard[player][playcodi][1] === 2) {
+                  home++
+                }
+                else if(gameboard[player][playcodi][0] === 0 && gameboard[player][playcodi][1] === 4){
+                  start++
+                }
+              }
+              else if (player === "player3") {
+                if (gameboard[player][playcodi][0] === 2 && gameboard[player][playcodi][1] === 2) {
+                  home++
+                }
+                else if(gameboard[player][playcodi][0] === 4 && gameboard[player][playcodi][1] === 4){
+                  start++
+                }
+              }
+              else if (player === "player4") {
+                if (gameboard[player][playcodi][0] === 2 && gameboard[player][playcodi][1] === 2) {
+                  home++
+                }
+                else if(gameboard[player][playcodi][0] === 4 && gameboard[player][playcodi][1] === 0){
+                  start++
+                }
+              }
+            
+          }
+          if(home===4){
+            curstatus = "Completed";
+          }
+          leaderboardArr.push({id:ind,name:player,email:start,status:home,score:curstatus})
+          ind++
         }
-        catch(e){
-            console.log(e)
-        }  
+
+        // console.log(leaderboardArr);
+        setplayerDetail(leaderboardArr);
      }
 
 
@@ -115,7 +173,8 @@ const LeaderBoard = ()=>{
                   fontWeight={"bold"}
                   textAlign={"center"}
                 >
-                  SL. NO.
+                  {/* SL. NO. */}
+                  PLAYER
                 </Th>
                 <Th
                   color={"black"}
@@ -123,7 +182,8 @@ const LeaderBoard = ()=>{
                   fontWeight={"bold"}
                   textAlign={"center"}
                 >
-                  PLAYER'S NAME
+                  {/* PLAYER'S NAME */}
+                  START
                 </Th>
                 <Th
                   color={"black"}
@@ -131,7 +191,8 @@ const LeaderBoard = ()=>{
                   fontWeight={"bold"}
                   textAlign={"center"}
                 >
-                  SCORE
+                  {/* SCORE */}
+                  HOME
                 </Th>
                 <Th
                   color={"black"}
@@ -144,7 +205,7 @@ const LeaderBoard = ()=>{
               </Tr>
             </Thead>
             <Tbody>
-              {mydata.map((el, index) => (
+              {playersDetail.map((el, index) => (
                 <LeaderBoard_Row player={el} key={el.id} index={index + 1} />
               ))}
             </Tbody>

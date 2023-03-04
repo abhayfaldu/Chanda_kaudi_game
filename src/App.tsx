@@ -7,6 +7,7 @@ import Navbar from "./Components/Home/Navbar";
 import MainRoute from './Routes/MainRoute';
 
 import Footer from './Components/Home/Footer';
+import LeaderBoard from './Components/LeaderBoard';
 
 
 
@@ -61,6 +62,10 @@ function App()  {
         b : [4,4],
         c : [4,4],
         d : [4,4],
+        // a : [2,2],
+        // b : [2,2],
+        // c : [2,2],
+        // d : [2,2],
       },
       player4 : {
         a : [4,0],
@@ -76,8 +81,8 @@ function App()  {
   return <div className="App">
        <Navbar />
       <MainRoute/>
+      {/* <LeaderBoard /> */}
       <Footer/>
-      
   </div>;
 }
 
