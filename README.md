@@ -72,7 +72,8 @@ The game can be played with a computer opponent, multiplayer game with people fr
     - `MongoDB `
     - `Socket`
 - #### For deploy database :- 
-      - `cyclic`
+    
+     - `Cyclic`
    
 
 - #### For Styling :-  
