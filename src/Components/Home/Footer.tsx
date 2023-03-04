@@ -11,7 +11,7 @@ import {
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
- import logo from '../../Utils/logo.jpeg';
+ import logo from '../../Utils/Logo_Chanda_Kaudi.png';
 import {Link} from "react-router-dom"
   const SocialButton = ({
     children,

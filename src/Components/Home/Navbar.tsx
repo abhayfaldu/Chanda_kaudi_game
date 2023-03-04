@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import logo from '../../Utils/logo.jpeg'
+import logo from '../../Utils/Logo_Chanda_Kaudi.png'
 
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { auth_logout } from "../../Redux/User/action";
