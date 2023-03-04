@@ -1,46 +1,156 @@
-# Getting Started with Create React App
+> 💻 PROJECT NAME⭐ ====>>>> 🌙CHANDA KAUDI![image](https://user-images.githubusercontent.com/107506646/222896907-80638c3d-9221-4347-8c02-fbf0db7181a0.png)
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a href="https://drive.google.com/file/d/18ubJcPyNQTvUz4YCmmxmjzRizXB8QrOv/view">![Demo video of Game](https://img.shields.io/badge/Demo_Video_Of_Game-Click_ME-brightgreen.svg?style=plastic&logo=YouTube&logoColor=red)</a>
 
-## Available Scripts
+[![Backend Repo Link](https://img.shields.io/badge/Backend_Repo_Link-0A66C2?style=for-the-badge&logo=github&logoColor=#FF7139)](https://github.com/abhayfaldu/abashed-store-5188-backend)
+[![Deploy to Cyclic](https://img.shields.io/badge/Deployed_Cyclic_Link-0A66C2?style=for-the-badge&logo=ko-fi&logoColor=white)](https://different-bat-sun-hat.cyclic.app
+)
 
-In the project directory, you can run:
+[![Deployed App Vercel Link](https://img.shields.io/badge/Deployed_App_Vercel_Link-000?style=for-the-badge&logo=ko-fi&logoColor=white)]()
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> ✨ABOUT GAME AND THEIR RULES
 
-### `npm test`
+⭕CHANDA KAUDI ,also known as Chaupar or Chaubara, is a traditional Indian board game that has been enjoyed enjoyed in India for centuries, and it is still played by many people today.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+⭕The game is similar to Pachisi and Ludo, and it is usually played on a wooden board with 5x5 or 7x7 grids.The board has a central square known as the "Chaubara," which means "four houses."
 
-### `npm run build`
+⭕The game is played with a board that has four colored squares, each with a set of four houses, and a central cross-shaped square that serves as a starting and finishing point for each player's pieces. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+⭕The game is usually played by two to four players, each of whom has four pieces or pawns that they move around the board according to the roll of a dice.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+⭕The objective of the game is to move all four of your pieces from the starting point to the finishing point, using a set of dice to determine how many spaces you can move on each turn. The first player to move all of their pieces to the finishing point wins the game.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+⭕One of the unique features of Chanda Kaudi is its ability to be played by people of all ages, making it a great game for families and friends to enjoy together. 
+The game can be played with a computer opponent, multiplayer game with people from around the world. 
 
-### `npm run eject`
+⭕Additionally, players can connect with each other by real time chats while playing the game together..This was a collaborative Project which is made by 4 team members within 2 Days.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🔗 Collaborators Profile Links✨
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Collaborators | Github                                                                                                                                   | Linkedin                                                                                                                                                            | Portfolio                                                                                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Shikha Gupta  (Team Lead)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shikhu51197/)| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shikha-gupta-12a2b5199) |[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://shikhu51197.github.io/) | 
+| Mandar Deshmukh (Member 1) | [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DeshmukhMandar3) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mandar-deshmukh-62821b189/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://deshmukhmandar3.github.io/) |
+| R Giri Reddy (Member 2) | [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/geraltyen) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giri-reddy-geralt/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](http://geraltyen.github.io) |
+| Kallol Sarkar (Member 3)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kallol0011) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kallol-sarkar-229000210/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://kallol0011.github.io/) |
+| Himanshu Sharma (Member 4)| [![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/himanshu7582901182) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himanshu-sharma7/) | [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://himanshu7582901182.github.io/) |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+
+💻Unique Project Name & logo :- CRUISE RENTALS🚗
+
+![CRuise (1)-modified](https://user-images.githubusercontent.com/107506646/220362530-270d0d67-df50-44f2-961e-838b22b3e619.png)  
+
+---
+## 💫Tech-Stack->
+
+- #### For Frontend :-
+   - `HTML5`
+  - `CSS3`
+  - `JavaScript `
+   - `Redux`
+  - `ReactJS`
+  - `Typescript `
+   - `ES6 `
+
+- #### For Backend :-
+   - `NodeJS`
+   - `ExpressJS`
+   - `MongoDB `
+
+- #### For deploy database :- 
+   - `cyclic `
+
+- #### For Styling :-  
+   - `Chakra UI `
+   
+
+- #### For live Project : -
+   - `Vercel`
+
+![ShopGIF](https://media.giphy.com/media/26BRrcK4dXrxl817q/giphy.gif)
+
+---
+## Features ✨:-
+---
+ | Serial No            | Feature                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| 1 | User signup and Login |
+| 2 | Products Page with Filter and Sort Functionalities |
+| 3 | Dynamic SinglePage & payment feature |
+| 4 | Dynamic cart page using userId |
+| 5 | Admin Login & Deshboard Page |
+| 6 | Homepage & Reservation Page |
+
+---
+# Package.json(Dependency)✨:-
+
+ | Serial No            | Backend                      |  Frontend      |
+| ----------------- | -------------------|------------------------ |
+| 1 | bcrypt |   Chakra-ui |
+| 2 | mongoose |  React Router dom |
+| 3 | cors |    redux ,react-icons |
+| 4 | dotenv |  react redux ,axios |
+| 5 | express | typescript |
+| 6 | jsonwebtoken | redux thunk |
+
+---
+
+## Flow
+
+```mermaid
+graph TD;
+    App-->HomePage
+    HomePage-->SignUpPage;
+      SignUpPage-->loginPage;
+       loginPage-->HomePage;
+       HomePage --> DeshboardPage
+       DeshboardPage-->LeaderBoardPage
+       DeshboardPage-->HomePage
+     
+```
+
+---
+## Screenshots 📷
+---
+
+# HomePage
+
+
+
+
+# Signup Page 
+
+
+
+# LoginPage
+
+
+
+# DeshboardPage
+
+
+
+# LeaderBoardPage
+
+
+
+#  Payment 
+
+
+# Admin & AdminDeshboard
+
+
+---
+
+
+<h1 align="center">✨Thank You✨</h1>
