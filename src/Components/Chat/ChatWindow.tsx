@@ -55,7 +55,7 @@ const ChatWindow = (props: ChatWindowProps) => {
 					/>
 				</Box>
 			) : (
-				<Flex w="full">
+				<Flex w="full" flexDir={["column","column","row","row"]}>
 					<Maindash socket={socket} room={room} />
 					<Chat socket={socket} userName={userName} room={room} />
 				</Flex>

@@ -69,6 +69,9 @@ const Chat = (props: ChatProps) => {
 			margin={"auto"}
 			borderBottomRightRadius="8px"
 			borderBottomLeftRadius="8px"
+			border={"1px solid gold"}
+			marginTop={"32px"}
+			borderRadius={"8px"}
 		>
 			<Heading
 				size={"md"}
