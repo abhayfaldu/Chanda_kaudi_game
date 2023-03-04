@@ -52,9 +52,9 @@ The game can be played with a computer opponent, multiplayer game with people fr
 
 
 
-![Logo_Chanda_Kaudi (1)](https://user-images.githubusercontent.com/107506646/222923347-a8f140f2-1e25-4d9a-a77c-2f8a284b6b38.png)
 
- 
+ ![Logo_Chanda_Kaudi](https://user-images.githubusercontent.com/107506646/222924374-0631c640-ee40-444c-9e3e-f87dc8913e67.png)
+
 
 ---
 ## 💫Tech-Stack->
