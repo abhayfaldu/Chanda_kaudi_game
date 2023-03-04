@@ -9,11 +9,13 @@ import {
   TableCaption,
   TableContainer,
   Box,
+  Button,
   Heading,
   Image,
   Flex,
 } from "@chakra-ui/react";
 import axios from "axios";
+import {Link} from "react-router-dom"
 
 
 import { useState, useEffect } from "react";
@@ -136,6 +138,7 @@ const LeaderBoard = ()=>{
 
 
     return (
+      <>
       <Box
         w={{ base: "100%", md: "80%", lg: "50%" }}
         h={"fit-content"}
@@ -212,6 +215,13 @@ const LeaderBoard = ()=>{
           </Table>
         </TableContainer>
       </Box>
+
+
+      <Box mt="20px">
+        <Link to = "/">
+        <Button color="black" bg="pink.900" >BACK TO HOME</Button></Link>
+      </Box>
+      </>
     );
 }
 
