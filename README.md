@@ -72,7 +72,7 @@ The game can be played with a computer opponent, multiplayer game with people fr
    - `NodeJS`
    - `ExpressJS`
     - `MongoDB `
-
+     - `Socket`
 - #### For deploy database :- 
 
    - `cyclic `
@@ -96,8 +96,8 @@ The game can be played with a computer opponent, multiplayer game with people fr
  | Serial No            | Feature                                                              |
 | ----------------- | ------------------------------------------------------------------ |
 | 1 | User signup and Login |
-| 2 | Home Page  |
-| 3 | Dashboard Page  |
+| 2 | Home Page , Multiplayer Accessibility |
+| 3 | Gameboard Page ,live Chat |
 | 4 | LeaderBoard  Page|
 | 5 | navbar , footer |
 | 6 | demo video , about game and rules  |
@@ -113,6 +113,7 @@ The game can be played with a computer opponent, multiplayer game with people fr
 | 4 | dotenv |  react redux ,axios |
 | 5 | express | typescript |
 | 6 | jsonwebtoken | redux thunk |
+| 7 | socket.io | socket.io-client |
 
 ---
 
