@@ -104,8 +104,8 @@ The game can be played with a computer opponent, multiplayer game with people fr
 | 1 | User signup and Login |
 | 2 | Home Page , Multiplayer Accessibility |
 | 3 | Gameboard Page ,live Chat |
-| 4 | LeaderBoard  Page|
-| 5 | navbar , footer |
+| 4 | LeaderBoard  Page ,Impressive UI|
+| 5 | navbar,footer,completely Responsive |
 | 6 | demo video , about game and rules  |
 
 ---
