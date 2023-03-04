@@ -1,22 +1,25 @@
-import React from 'react'
-import {Routes,Route} from 'react-router-dom'
-import Maindash from '../Components/MainDash/Maindash';
-import Login from '../Page/Login';
-import HomePage from './../Components/Home/HomePage';
-import Signup from './../Page/Signup';
+import React from "react";
 
-const MainRoute = () => {
-  return (
-    <div>
-      <Routes>
-        <Route path="/" element={<HomePage/>}/>
-   <Route  path="/login" element={<Login/>}/>
-        <Route  path="/signup" element={<Signup/>}/>
-        <Route  path="/gamecontrol" element={<Maindash />}/>
-      </Routes>
+import { Route, Routes } from "react-router-dom";
+import { socketType } from "../App";
+import ChatWindow from "../Components/Chat/ChatWindow";
+// import Chat from "../Components/Chat";
+import Maindash from "../Components/MainDash/Maindash";
+import Login from "../Page/Login";
+import HomePage from "./../Components/Home/HomePage";
+import Signup from "./../Page/Signup";
 
-    </div>
-  )
-}
+const MainRoute = ({ socket }: { socket: socketType }) => {
+	return (
+		<div>
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/signup" element={<Signup />} />
+				<Route path="/chat" element={<ChatWindow socket={socket} />} />
+			</Routes>
+		</div>
+	);
+};
 
-export default MainRoute
+export default MainRoute;
