@@ -15,9 +15,12 @@ import {
 import {FaDownload} from 'react-icons/fa'
 import {Link } from 'react-router-dom'
   import logo1 from '../../Utils/gamepad.png'
+import Navbar from './Navbar';
 
 const HomePage = () => {
   return (
+<>
+{/* <Navbar/> */}
 
     <Flex
   direction={{
@@ -97,7 +100,7 @@ const HomePage = () => {
       spacing={2}
     >
      <Link to ="/gamecontrol">
-      <Button ml={170} w={"100%"}  mt={30} size="lg" colorScheme='whatsapp'>Play Now</Button>
+      <Button ml={["0","20","30","50"]} w={["200px","200px","200px","500px"]}  mt={30} size="lg" colorScheme='whatsapp'>Play Now</Button>
       </Link>
     </Stack>
   </Box>
@@ -118,6 +121,7 @@ const HomePage = () => {
         </Box>
   </Box>
 </Flex>
+</>
   )
 }
 

@@ -20,6 +20,17 @@ import { Link } from 'react-router-dom';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import logo from '../../Utils/logo.jpeg'
 
+import { useDispatch, useSelector } from "react-redux/es/exports";
+import { auth_logout } from "../../Redux/User/action";
+import { useNavigate } from "react-router-dom";
+import { stateType } from "../../Redux/User/reducer";
+import { useEffect } from 'react';
+
+type Props = {};
+
+
+
+
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Box
     px={2}
@@ -34,20 +45,36 @@ const NavLink = ({ children }: { children: ReactNode }) => (
   </Box>
 );
 
-export default function Navbar() {
+export default function Navbar(props: Props) {
+  const dispatch: any = useDispatch();
+  const state: stateType = useSelector((state: any) => state.AuthManager);
+  const { isAuth } = state;
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
+
+  const handleLogout=()=> {
+    localStorage.removeItem("userloggedin")
+    navigate("/login")
+  }
+ 
+const value = JSON.parse(localStorage.getItem('userloggedin')as string)|| "email"
+ console.log(value.length)
+
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box><Avatar
+          <Box>
+            <Link to ="/">
+            <Avatar
                     size={'lg'}
                     src={logo}
-                  /></Box>
+                  /></Link></Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
+
             <Link to = "/signup"><Button colorScheme='red'  >
                  Signup
                  
@@ -80,11 +107,22 @@ export default function Navbar() {
                   </Center>
                   <br />
                   <Center>
-                    <p>Abhay Fadul</p>
+                    <p>{value.email}</p>
                   </Center>
                   <br />
                   <MenuDivider />
-                  <MenuItem>Logout</MenuItem>
+     {value.length>0 ? <Link to = "/login">
+            <Button className="link"
+            marginTop={"30px"}
+            variant={"outline"}
+            >Login</Button></Link> :
+                  <Button className="link"
+            marginTop={"30px"}
+            variant={"outline"}
+            onClick = {handleLogout}
+            >Logout</Button>
+            
+            }
                 </MenuList>
               </Menu>
             </Stack>

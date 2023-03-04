@@ -239,11 +239,3 @@ const Maindash: React.FC = () => {
 };
 
 export default Maindash;
-
-
-
-
-
-
-
-
