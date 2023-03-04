@@ -38,15 +38,28 @@ const HomeStyle = {
       ? BlueArrow
       : rowind == 3 && colind == 4
       ? RedArrow
-      :  rowind == 1 && colind == 2
-      ? OrangeArrow: rowind == 2 && colind == 1
-      ? GreenArrow: rowind == 3 && colind == 2
-      ? BlueArrow: rowind == 2 && colind == 3
-      ? RedArrow:"none"
-      
+      : rowind == 1 && colind == 2
+      ? OrangeArrow
+      : rowind == 2 && colind == 1
+      ? GreenArrow
+      : rowind == 3 && colind == 2
+      ? BlueArrow
+      : rowind == 2 && colind == 3
+      ? RedArrow
+      : "none"
   })`,
   backgroundPosition: "center",
   backgroundSize: "cover",
+  border:
+    rowind == 0 && colind == 0
+      ? "3px solid green"
+      : rowind == 0 && colind == 4
+      ? "3px solid orange"
+      : rowind == 4 && colind == 4
+      ? "3px solid red"
+      : rowind == 4 && colind == 0
+      ? "3px solid blue"
+      : "3px solid black",
 };
 
   
