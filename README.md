@@ -72,8 +72,8 @@ The game can be played with a computer opponent, multiplayer game with people fr
     - `MongoDB `
     - `Socket`
 - #### For deploy database :- 
-
-   - `cyclic `
+      - `cyclic`
+   
 
 - #### For Styling :-  
    - `Chakra UI `
@@ -82,7 +82,7 @@ The game can be played with a computer opponent, multiplayer game with people fr
 - #### For live Project : -
    - `Vercel`
    
-##⭕Steps to run our game:
+## ⭕Steps to run our game:
 
 ✨Clone the repository.
 
