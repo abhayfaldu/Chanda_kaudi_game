@@ -1,4 +1,4 @@
-> 💻 PROJECT NAME ✨-------------> 🌙CHANDA KAUDI🎮
+> 💻 PROJECT NAME ✨ => 🌙CHANDA KAUDI🎮
 <br>
 
 ![pasted_graphic_13_360](https://user-images.githubusercontent.com/107506646/222923771-d130e04d-4b3f-439c-b9c2-87e3efceada9.png)
