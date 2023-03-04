@@ -9,7 +9,7 @@
 [![Backend Deploy to Cyclic](https://img.shields.io/badge/Backend_Deployed_Cyclic_Link-0A66C2?style=for-the-badge&logo=ko-fi&logoColor=white)](https://different-bat-sun-hat.cyclic.app
 )
 
-[![Deployed App Vercel Link](https://img.shields.io/badge/Deployed_App_Vercel_Link-000?style=for-the-badge&logo=ko-fi&logoColor=white)]()
+[![Deployed App Vercel Link](https://img.shields.io/badge/Deployed_App_Vercel_Link-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://chanda-kaudi-game.vercel.app/)
 
 ---
 
