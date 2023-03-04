@@ -1,52 +1,55 @@
-import React, { useEffect } from 'react';
-import './App.css';
-
-
+import React, { useEffect } from "react";
+import "./App.css";
 import Navbar from "./Components/Home/Navbar";
+import MainRoute from "./Routes/MainRoute";
+import Footer from "./Components/Home/Footer";
+import { io, Socket } from "socket.io-client";
+import { MessageDataType } from "./Components/Chat/Chat";
+import { BoardStateType } from "./Components/MainDash/Maindash";
+const ENDPOINT = "http://localhost:3001";
 
-import MainRoute from './Routes/MainRoute';
-
-import Footer from './Components/Home/Footer';
-
-
-// import Signup from './Page/Signup';
-
-
-
-
-
-
-
-export interface GameBoardtype {
-
- player1: {
-    a: [number, number];
-    b: [number, number];
-    c: [number, number];
-    d: [number, number];
-  };
-  player2: {
-    a: [number, number];
-    b: [number, number];
-    c: [number, number];
-    d: [number, number];
-  };
-  player3: {
-    a: [number, number];
-    b: [number, number];
-    c: [number, number];
-    d: [number, number];
-  };
-  player4: {
-    a: [number, number];
-    b: [number, number];
-    c: [number, number];
-    d: [number, number];
-  };
+export interface ServerToClientEvents {
+	receive_message: (message: MessageDataType) => void;
+	player_played_server_to_client: (boardState: BoardStateType) => void;
 }
 
-function App()  {
+export interface ClientToServerEvents {
+	join_room: (room: string) => void;
+	send_message: (massageData: MessageDataType) => void;
+	player_played: (boardState: BoardStateType) => void;
+}
 
+export type socketType = Socket<ServerToClientEvents, ClientToServerEvents>;
+const socket: socketType = io(ENDPOINT);
+
+export interface GameBoardtype {
+	player1: {
+		a: [number, number];
+		b: [number, number];
+		c: [number, number];
+		d: [number, number];
+	};
+	player2: {
+		a: [number, number];
+		b: [number, number];
+		c: [number, number];
+		d: [number, number];
+	};
+	player3: {
+		a: [number, number];
+		b: [number, number];
+		c: [number, number];
+		d: [number, number];
+	};
+	player4: {
+		a: [number, number];
+		b: [number, number];
+		c: [number, number];
+		d: [number, number];
+	};
+}
+
+function App() {
   useEffect(()=>{
     let gameboard : GameBoardtype = {
       player1 : {
@@ -84,11 +87,8 @@ function App()  {
 
   return <div className="App">
        <Navbar />
-      <MainRoute/>
-
+      <MainRoute socket={socket}/>
        <Footer />
-      
-
   </div>;
 }
 

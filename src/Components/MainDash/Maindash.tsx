@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import Singlediv from '../SingleDiv/Singlediv';
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { GameBoardtype as GameData, socketType } from "../../App";
+import Singlediv from "../SingleDiv/Singlediv";
 import styles from "./maindash.module.css";
-
-
 
 
 import KaudiModal from '../KaudiModal';
@@ -11,25 +11,54 @@ import { Flex, Image, Box, Heading , Button ,ButtonGroup ,Stack,useDisclosure} f
 import { GameBoardtype as GameData } from "../../App";
 import { Link } from 'react-router-dom';
 
-
-
-
 interface CellData {
-  player: number;
-  codi: string;
-  color: string;
-  row: number;
-  col: number;
+	player: number;
+	codi: string;
+	color: string;
+	row: number;
+	col: number;
+}
+interface MaindashProps {
+	socket: socketType;
+	room: string;
 }
 
-const Maindash: React.FC = () => {
+export interface BoardStateType {
+	dice: number;
+	chance: number;
+	board: any;
+	room: string;
+}
+
+
+
+const Maindash = (props: MaindashProps) => {
+	const { socket, room } = props;
   const [state, setState] = useState<boolean>(true);
   const [chance, setChance] = useState<number>(1);
   const [dice, setDice] = useState<number>(0);
   const [board, setBoard] = useState<CellData[][][]>([[[]]]);
-
-
    const { isOpen, onOpen, onClose } = useDisclosure();
+   
+   const playerPlayed = async ({ mat, chance, dice }: any) => {
+		const boardState: BoardStateType = {
+			dice,
+			chance,
+			board: mat,
+			room,
+		};
+		await socket.emit("player_played", boardState);
+	};
+
+	useEffect(() => {
+		console.log("trigered useEff");
+		socket.on("player_played_server_to_client", boardState => {
+			console.log(boardState);
+			setDice(boardState.dice);
+			setChance(boardState.chance);
+			setBoard(boardState.board);
+		});
+	}, [socket]);
 
   useEffect(() => {
     let gameboard: GameData | null = JSON.parse(localStorage.getItem('gameboard') as string);
@@ -98,6 +127,7 @@ const Maindash: React.FC = () => {
       }
     }
     setBoard(mat);
+		playerPlayed({ mat, chance, dice });
   }, [state]);
 
 
