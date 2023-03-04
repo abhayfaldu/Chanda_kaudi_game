@@ -51,17 +51,26 @@ export default function Navbar(props: Props) {
   const { isAuth } = state;
   const { colorMode, toggleColorMode } = useColorMode();
   // const { isOpen, onOpen, onClose } = useDisclosure();
- 
+  const navigate = useNavigate();
 
+  const handleLogout=()=> {
+    localStorage.removeItem("userloggedin")
+    navigate("/login")
+  }
+ 
+const value = JSON.parse(localStorage.getItem('userloggedin')as string)|| "email"
+ console.log(value.length)
 
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box><Avatar
+          <Box>
+            <Link to ="/">
+            <Avatar
                     size={'lg'}
                     src={logo}
-                  /></Box>
+                  /></Link></Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
@@ -98,16 +107,22 @@ export default function Navbar(props: Props) {
                   </Center>
                   <br />
                   <Center>
-                    <p>Abhay Fadul</p>
+                    <p>{value.email}</p>
                   </Center>
                   <br />
                   <MenuDivider />
-     
+     {value.length>0 ? <Link to = "/login">
+            <Button className="link"
+            marginTop={"30px"}
+            variant={"outline"}
+            >Login</Button></Link> :
                   <Button className="link"
             marginTop={"30px"}
             variant={"outline"}
-            onClick={() => dispatch(auth_logout())}>Logout</Button>
+            onClick = {handleLogout}
+            >Logout</Button>
             
+            }
                 </MenuList>
               </Menu>
             </Stack>

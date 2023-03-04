@@ -11,14 +11,19 @@ export interface LeaderBoard_Row_Type {
 }
 
 const LeaderBoard_Row = (props: LeaderBoard_Row_Type) => {
-  const { id, name, status, score } = props.player;
+  // const { id, name, status, score } = props.player;
+  const { id, name, status, score ,email} = props.player;
 
   return (
     <Tr>
-      <Td textAlign={"center"} fontWeight={'bold'}>{props.index}</Td>
+      {/* <Td textAlign={"center"} fontWeight={'bold'}>{props.index}</Td>
       <Td textAlign={"center"}>{name}</Td>
       <Td textAlign={"center"}>{score}</Td>
+      <Td textAlign={"center"}>{status}</Td> */}
+      <Td textAlign={"center"} fontWeight={'bold'}>{name}</Td>
+      <Td textAlign={"center"}>{email}</Td>
       <Td textAlign={"center"}>{status}</Td>
+      <Td textAlign={"center"}>{score}</Td>
     </Tr>
   );
 };
