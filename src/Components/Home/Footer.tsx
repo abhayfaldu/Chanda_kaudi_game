@@ -46,7 +46,7 @@ import {Link} from "react-router-dom"
   
   export default function Footer() {
     return (
-      <Box
+      <Box mt='auto'
      
         bg={useColorModeValue('gray.100', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}>

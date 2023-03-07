@@ -15,10 +15,11 @@ const JoinChatRoom = (props: JoinChatRoomProps) => {
 	return (
 		<Flex
 			flexDir={"column"}
-			w={"full"}
+			maxW={"xl"}
 			className="chat_container"
 			gap={2}
 			align="center"
+			m='auto'
 		>
 			<Heading size="md">Join a chat</Heading>
 			<Input
