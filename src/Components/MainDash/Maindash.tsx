@@ -327,7 +327,8 @@ const Maindash = (props: MaindashProps) => {
 						return el.map((cel, ci) => {
 							return (
 								<Singlediv
-									key={Date.now() + Math.random() * 7}
+									// key={Date.now() + Math.random() * 7}
+									key={`${Date.now()}${Math.random() * 7}${ri}${ci}`}
 									alldata={[...cel]}
 									dicefun={setDice}
 									stfun={setState}

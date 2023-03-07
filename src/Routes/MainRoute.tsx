@@ -16,7 +16,7 @@ const MainRoute = ({ socket }: { socket: socketType }) => {
 				<Route path="/login" element={<Login />} />
       {/* // <Route  path="/gamecontrol" element={<Maindash />}/> */}
 				<Route path="/signup" element={<Signup />} />
-				<Route path="/chat" element={<ChatWindow socket={socket} />} />
+				<Route path="/game" element={<ChatWindow socket={socket} />} />
         <Route  path="/leaderboard" element={<LeaderBoard />}/>
 			</Routes>
 		</div>

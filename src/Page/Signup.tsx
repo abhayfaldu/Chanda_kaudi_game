@@ -167,7 +167,7 @@ const handleSubmit = (): void => {
                 align={'start'}
                 justify={'space-between'}>
                 <Checkbox>Remember me</Checkbox>
-                <Box color={'red.500'}>Forgot password?</Box>
+                <Box onClick={() => navigate("/login")} color={'red.500'}>Already Have an account?</Box>
               </Stack>
               {/* <Link to = "/login"> */}
               <Button w="full" colorScheme={'red'} variant={'solid'}  onClick={handleSubmit}
